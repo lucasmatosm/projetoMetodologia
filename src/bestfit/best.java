@@ -13,7 +13,7 @@ public class best {
 		int p, m;
 		Scanner in = new Scanner(System.in);
 
-		System.out.println("Nº processos:");
+		System.out.println("Nº Requisicoes:");
 		p = in.nextInt();
 		System.out.println("Nº blocos de memória:");
 		m = in.nextInt();
@@ -24,7 +24,7 @@ public class best {
 		int i;
 
 		for (i = 0; i < p; i++) {
-			System.out.println("Tamanho do processo " + (i+1));
+			System.out.println("Tamanho da VM " + (i+1));
 			tamProcessos[i] = in.nextInt();
 		}
 
@@ -53,7 +53,7 @@ public class best {
 				if (segMemoria[j].size >= tamProcessos[i]) {
 					segMemoria[j].size -= tamProcessos[i];
 					
-					System.out.print("Processo " + (i + 1)
+					System.out.print("VM " + (i + 1)
 							+ " alocado no espaço de memória " + segMemoria[j].id+". ");
 					System.out.println("Espaço restante após a alocação "
 							+ segMemoria[j].size);

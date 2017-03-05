@@ -22,7 +22,7 @@ public class worst {
 		int i;
 
 		for (i = 0; i < p; i++) {
-			System.out.println("Tamanho da VM " + (i + 1));
+			System.out.println("Tamanho da VM:" + (i + 1));
 			tamProcessos[i] = in.nextInt();
 		}
 
@@ -44,7 +44,7 @@ public class worst {
 				if (segMemoria[j].size >= tamProcessos[i]) {
 					segMemoria[j].size -= tamProcessos[i];
 					
-					System.out.print("Segmento " + (i + 1)
+					System.out.print("VM " + (i + 1)
 							+ " alocado no espaço de memoria " + segMemoria[j].id + ". ");
 					System.out.println("Espaço restante após a alocação "
 							+ segMemoria[j].size);

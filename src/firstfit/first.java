@@ -8,7 +8,7 @@ public class first {
 
 		Scanner in = new Scanner(System.in);
 
-		System.out.println("Nº processos:");
+		System.out.println("Nº Requisicoes:");
 		int p = in.nextInt();
 
 		System.out.println("Nº blocos de memória:");
@@ -19,7 +19,7 @@ public class first {
 
 		int i = 0;
 		for (i = 0; i < p; i++) {
-			System.out.println("Tamanho do processo " + (i + 1) + ":");
+			System.out.println("Tamanho da VM " + (i + 1) + ":");
 			tamProcessos[i] = in.nextInt();
 		}
 
@@ -38,7 +38,7 @@ public class first {
 				if (segMemoria[j].size >= tamProcessos[i]) {
 					segMemoria[j].size -= tamProcessos[i];
 
-					System.out.println("Processo " + (i + 1)
+					System.out.println("VM " + (i + 1)
 							+ " alocado no espaço de memória " + segMemoria[j].id
 							+ ". Espaço restante após a alocação " + segMemoria[j].size);
 					break;

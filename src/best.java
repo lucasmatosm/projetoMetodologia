@@ -53,10 +53,9 @@ public class best {
 				}
 
 			}
-			if (j == NUMBER_OF_PMS) {
-				System.out.println("Não há mais memória para a VM " + i);
-				
-			}
+			//if (j == NUMBER_OF_PMS) {
+			//	System.out.println("Não há mais memoria para a requisicao " + i);
+			//}
 		}
 		System.out.println("VMS Aceitas " + aceitas);
 		System.out.println("VMS rejeitadas " + rejeitadas);	

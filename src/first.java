@@ -43,9 +43,9 @@ public class first {
 				}
 
 			}
-			if (j == NUMBER_OF_PMS) {
-				System.out.println("Não há mais memória para a VM " + i);
-			}
+			//if (j == NUMBER_OF_PMS) {
+			//	System.out.println("Não há mais memoria para a requisicao " + i);
+			//}
 		}
 		
 		

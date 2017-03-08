@@ -1,4 +1,4 @@
-package simulator;
+
 
 public class VM {
 	public Float cpuReq;

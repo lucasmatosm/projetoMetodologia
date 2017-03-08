@@ -1,4 +1,4 @@
-package segMemoria;
+
 
 public class SegMemoria {
 	public int id;

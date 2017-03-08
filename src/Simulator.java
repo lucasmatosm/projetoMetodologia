@@ -1,4 +1,4 @@
-package simulator;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -7,19 +7,18 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import bestfit.best;
-import firstfit.first;
-import simulator.*;
+
 
 public class Simulator {
 	
 	public static ArrayList<VM> traceVMS = new ArrayList<VM>();
 	
-
-	
 	public static void main(String[] args) {
 		
-		String type_of_VM = "Production";
+		float MEM_CAP_OF_PM = Float.parseFloat(args[1]);
+		float CPU_CAP_OF_PM = Float.parseFloat(args[1]);
+		String type_of_VM = args[2];
+		
 		int numberOfRequests = 0;
 		
 		String csvFile = "trace_reduzido.txt";
@@ -42,13 +41,15 @@ public class Simulator {
             	}
             }
             
-            if(true) {
-    			best fit = new best(traceVMS,(float) 0.55, (float) 0.55);
+            if(args[0].equals("first-fit")) {
+    			best fit = new best(traceVMS,MEM_CAP_OF_PM, CPU_CAP_OF_PM);
     			fit.aloca();
-    		}else if(false){
-    			//
+    		}else if(args[0].equals("best-fit")){
+    			first fit = new first(traceVMS,MEM_CAP_OF_PM, CPU_CAP_OF_PM);
+    			fit.aloca();
     		}else{
-    			//
+    			worst fit = new worst(traceVMS,MEM_CAP_OF_PM, CPU_CAP_OF_PM);
+    			fit.aloca();
     		}
 
         } catch (IOException e) {

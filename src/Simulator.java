@@ -41,10 +41,10 @@ public class Simulator {
             	}
             }
             
-            if(args[0].equals("first-fit")) {
+            if(args[0].equals("best-fit")) {
     			best fit = new best(traceVMS,MEM_CAP_OF_PM, CPU_CAP_OF_PM);
     			fit.aloca();
-    		}else if(args[0].equals("best-fit")){
+    		}else if(args[0].equals("first-fit")){
     			first fit = new first(traceVMS,MEM_CAP_OF_PM, CPU_CAP_OF_PM);
     			fit.aloca();
     		}else{
